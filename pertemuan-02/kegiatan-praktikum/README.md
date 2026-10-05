@@ -1,177 +1,90 @@
-# Praktikum 2 — HTTP Method dan Endpoint
+# Kegiatan Praktikum Pertemuan 02
 
-## Identitas
+## Judul
 
-| Keterangan | Detail |
-|---|---|
-| **Nama** | Sri Maulani |
-| **NIM** | 2024520016 |
-| **Program Studi** | Informatika |
+Pengujian HTTP Method dan HTTP Status Code menggunakan Postman dan HTTPBin
 
----
+## Tujuan
 
-## Deskripsi Kegiatan
+Melakukan pengujian HTTP Method dan HTTP Status Code menggunakan Postman untuk memahami proses request dan response pada komunikasi HTTP.
 
-Pada kegiatan praktikum ini dilakukan pengujian beberapa **HTTP method** menggunakan **Postman** dengan layanan publik **HTTPBin**.
+Pengujian dilakukan menggunakan HTTPBin sebagai layanan untuk melihat data request yang dikirim oleh client serta memahami status code yang diberikan oleh server.
 
-Praktikum ini bertujuan untuk memahami bagaimana client mengirim **request** ke server melalui method dan endpoint tertentu, serta bagaimana server memberikan **response** berupa status code dan data JSON.
+## Cara Menjalankan
 
-HTTP method yang digunakan:
+Pengujian dilakukan menggunakan aplikasi Postman dengan langkah-langkah berikut:
 
-- GET
-- POST
-- PUT
-- PATCH
-- DELETE
+1. Membuka aplikasi Postman.
+2. Membuat request HTTP sesuai dengan pengujian yang dilakukan.
+3. Memasukkan URL HTTPBin.
+4. Mengatur method dan parameter sesuai kebutuhan pengujian.
+5. Mengirim request menggunakan tombol **Send**.
+6. Mengamati status code dan response yang diberikan oleh server.
+7. Menyimpan screenshot hasil pengujian sebagai bukti pengerjaan.
 
-Base URL:
+## Hasil
 
-```text
-https://httpbin.org
-```
+### 1. Pengujian GET
 
----
+Request GET berhasil dikirim ke HTTPBin dan menghasilkan response dari server.
 
-## Endpoint yang Diuji
+**Bukti hasil pengujian GET:**
 
-| No | Method | Endpoint | Data |
-|---:|:---:|:---|:---|
-| 1 | GET | `/get` | Query parameter `nama`, `nim` |
-| 2 | POST | `/post` | JSON `nama`, `nim`, `prodi` |
-| 3 | PUT | `/put` | JSON `nama`, `nim`, `status` |
-| 4 | PATCH | `/patch` | JSON `status`, `semester` |
-| 5 | DELETE | `/delete` | Tidak ada body |
+[![Hasil Pengujian GET](./tm1-fungsi-get.png)](./tm1-fungsi-get.png)
 
----
+### 2. Pengujian PUT
 
-## Hasil Praktikum
+Request PUT berhasil dikirim ke HTTPBin dan menghasilkan response dari server.
 
-Seluruh request yang diuji berhasil mendapatkan response dengan status **200 OK**.
+**Bukti hasil pengujian PUT:**
 
-### GET `/get`
+[![Hasil Pengujian POST](./tm1-fungsi-put.png)](./tm1-fungsi-put.png)
 
-URL yang digunakan:
+### 3. Pengujian HTTP Status Code
 
-```text
-https://httpbin.org/get?nama=anik&nim=2024520016
-```
+Pengujian HTTP Status Code dilakukan menggunakan endpoint:
 
-Data yang dikirim:
+`https://httpbin.org/status/:code`
 
-```text
-nama = anik
-nim = 2024520016
-```
+Method yang digunakan adalah **GET**.
 
-Server mengembalikan query parameter pada bagian `args`:
+Pengujian dilakukan dengan beberapa status code untuk melihat response yang diberikan oleh server.
 
-```json
-{
-  "args": {
-    "nama": "anik",
-    "nim": "2024520016"
-  }
-}
-```
+#### Status Code 200
 
-Response juga berisi informasi header, origin, dan URL request.
+[![Hasil Pengujian Status Code 200](./tm2-200.png)](./tm2-200.png)
 
-### POST `/post`
+#### Status Code 201
 
-URL:
+[![Hasil Pengujian Status Code 201](./tm2-201.png)](./tm2-201.png)
 
-```text
-https://httpbin.org/post
-```
+#### Status Code 400
 
-Data yang dikirim:
+[![Hasil Pengujian Status Code 400](./tm2-400.png)](./tm2-400.png)
 
-```json
-{
-  "nama": "Anik",
-  "nim": "2024520016",
-  "prodi": "Informatika"
-}
-```
+## Lokasi Bukti
 
-Data berhasil diterima server dan dikembalikan pada bagian `json` response.
+Bukti screenshot hasil pengujian disimpan pada folder:
 
-### PUT `/put`
+`pertemuan-02/kegiatan-praktikum/`
 
-URL:
+### Bukti TM-1
 
-```text
-https://httpbin.org/put
-```
+- [tm1-fungsi-get.png](./tm1-fungsi-get.png)
+- [tm1-fungsi-put.png](./tm1-fungsi-put.png)
 
-Data yang dikirim:
+### Bukti TM-2
 
-```json
-{
-  "nama": "Anik",
-  "nim": "2024520016",
-  "status": "Mahasiswa Aktif"
-}
-```
+- [tm_2_200.png](./tm2-200.png)
+- [tm2-201.png](./tm2-201.png)
+- [tm2-400.png](./tm2-400.png)
 
-Server menerima request dan mengembalikan kembali data JSON yang dikirim.
+## Laporan Tugas
 
-### PATCH `/patch`
+### TM-1 — HTTP Method
 
-URL:
+[`tugas-mandiri-1-http-method.md`](../tugas-mandiri/backend/tugas-mandiri-1-http-method.md)
 
-```text
-https://httpbin.org/patch
-```
+### TM-2 — HTTP Status Code
 
-Data yang dikirim:
-
-```json
-{
-  "status": "Mahasiswa Aktif",
-  "semester": 5
-}
-```
-
-Server berhasil menerima data dan mengembalikannya pada response bagian `json`.
-
-### DELETE `/delete`
-
-URL:
-
-```text
-https://httpbin.org/delete
-```
-
-Pada request DELETE tidak terdapat data pada request body.
-
-Response menunjukkan:
-
-```json
-{
-  "data": "",
-  "json": null
-}
-```
-
-Request berhasil diproses oleh server dengan status **200 OK**.
-
----
-
-## Dokumentasi Postman
-
-### Screenshot GET
-
-> Masukkan screenshot hasil request GET dari Postman di sini.
-
-### Screenshot POST
-
-> Masukkan screenshot hasil request POST dari Postman di sini.
-
----
-
-## Kesimpulan
-
-Dari kegiatan praktikum ini dapat dipahami bahwa setiap **HTTP method** memiliki penggunaan yang berbeda dalam komunikasi client dan server. GET menggunakan query parameter, sedangkan POST, PUT, dan PATCH dapat mengirim data melalui request body dalam format JSON. DELETE dapat digunakan tanpa request body.
-
-Pengujian menggunakan Postman dan HTTPBin menunjukkan bahwa request berhasil diterima oleh server dan menghasilkan **response 200 OK**. Praktikum ini memberikan pemahaman dasar mengenai hubungan antara **method, endpoint, request, parameter, status code, dan response**.
+[`tugas-mandiri-2-status-code.md`](../tugas-mandiri/backend/tugas-mandiri-2-status-kode.md)
