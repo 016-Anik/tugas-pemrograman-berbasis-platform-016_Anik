@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa - Sri Maulani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-[#fff5f8] font-sans text-[#493746]">
+
+   
+    <nav class="bg-white shadow-sm">
+        <div class="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 py-4 sm:flex-row sm:justify-between">
+            <a href="#" class="text-xl font-bold text-[#a34f78]">
+                Sri Maulani
+            </a>
+
+            <div class="flex flex-wrap justify-center gap-5 text-sm font-medium">
+                <a href="#beranda" class="transition-colors hover:text-[#c65d91]">
+                    Beranda
+                </a>
+                <a href="#profil" class="transition-colors hover:text-[#c65d91]">
+                    Profil
+                </a>
+                <a href="#kontak" class="transition-colors hover:text-[#c65d91]">
+                    Kontak
+                </a>
+            </div>
+        </div>
+    </nav>
+
+   
+    <header id="beranda" class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-4 py-12 md:grid-cols-2 md:py-20">
+        <div>
+            <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-[#c65d91]">
+                Profil Mahasiswa
+            </p>
+
+            <h1 class="mb-4 text-3xl font-bold leading-tight text-[#a34f78] md:text-5xl">
+                Selamat Datang di Halaman Profil Saya!
+            </h1>
+
+            <p class="mb-6 leading-relaxed text-[#806b79]">
+                Halo, saya Sri Maulani, mahasiswa Informatika.
+                Halaman ini dibuat untuk mempelajari penggunaan
+                class utility Tailwind CSS dalam menyusun tata letak
+                yang responsif dan nyaman dilihat.
+            </p>
+
+            <a href="#profil"
+               class="inline-block rounded-xl bg-[#c65d91] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#a94778]">
+                Jelajahi Profil
+            </a>
+        </div>
+
+        <div class="flex justify-center">
+            <img
+                src="fotonew.jpeg"
+                alt="Foto profil Sri Maulani"
+                class="h-56 w-56 rounded-full border-8 border-white object-cover shadow-lg md:h-72 md:w-72"
+            >
+        </div>
+    </header>
+
+   
+    <main id="profil" class="mx-auto max-w-6xl px-4 py-10">
+        <div class="mb-8 text-center">
+            <h2 class="mb-3 text-2xl font-bold text-[#a34f78] md:text-3xl">
+                Informasi Mahasiswa
+            </h2>
+
+            <p class="text-[#806b79]">
+                Kenali informasi dan aktivitas saya.
+            </p>
+        </div>
+
+        <section class="grid grid-cols-1 gap-6 md:grid-cols-3">
+
+           
+            <article class="rounded-2xl border border-[#f1d5e2] bg-white p-6 shadow-sm transition-transform hover:-translate-y-1 hover:shadow-lg">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#fce4ef] text-2xl">
+                    👩🏻‍🎓
+                </div>
+
+                <h3 class="mb-3 text-lg font-bold text-[#a34f78]">
+                    Biodata
+                </h3>
+
+                <p class="mb-2 text-sm leading-relaxed text-[#806b79]">
+                    Nama: Sri Maulani
+                </p>
+
+                <p class="text-sm leading-relaxed text-[#806b79]">
+                    NIM: 2024520016
+                </p>
+            </article>
+
+           
+            <article class="rounded-2xl border border-[#f1d5e2] bg-white p-6 shadow-sm transition-transform hover:-translate-y-1 hover:shadow-lg">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#fce4ef] text-2xl">
+                    📚
+                </div>
+
+                <h3 class="mb-3 text-lg font-bold text-[#a34f78]">
+                    Jadwal Kuliah
+                </h3>
+
+                <p class="text-sm leading-relaxed text-[#806b79]">
+                    Kegiatan perkuliahan dan praktikum
+                    untuk menambah pengetahuan di bidang Informatika.
+                </p>
+            </article>
+
+          
+            <article class="rounded-2xl border border-[#f1d5e2] bg-white p-6 shadow-sm transition-transform hover:-translate-y-1 hover:shadow-lg">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#fce4ef] text-2xl">
+                    💻
+                </div>
+
+                <h3 class="mb-3 text-lg font-bold text-[#a34f78]">
+                    Kegiatan
+                </h3>
+
+                <p class="text-sm leading-relaxed text-[#806b79]">
+                    Belajar pemrograman, mengerjakan tugas praktikum,
+                    dan mengembangkan keterampilan teknologi.
+                </p>
+            </article>
+
+        </section>
+    </main>
+
+    <footer id="kontak" class="mt-10 bg-white px-4 py-6 text-center">
+        <p class="text-sm text-[#806b79]">
+            © 2026 Sri Maulani | Praktikum pemrograman Berbasis Platform
+        </p>
+    </footer>
+
+</body>
+</html>
